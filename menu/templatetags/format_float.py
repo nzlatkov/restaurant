@@ -1,6 +1,8 @@
 from django import template
+
 register = template.Library()
 
+
 @register.filter
-def index(indexable, i):
-    return indexable[i]
+def format_float(x):
+    return "{:.2f}".format(x)

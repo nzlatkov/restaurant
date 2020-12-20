@@ -38,10 +38,16 @@ def menu(request):
 
     return render(request, 'menu.html', context)
 
-
+@login_required
 def food_details(request, pk):
+    food = Food.objects.get(pk=pk)
+    current_user = User.objects.get(pk=request.user.id)
+
+    is_authorized = current_user.is_superuser or current_user is food.submitter
+
     context = {
-        'food': Food.objects.get(pk=pk)
+        'food': Food.objects.get(pk=pk),
+        'is_authorized': is_authorized,
     }
 
     return render(request, 'food-details.html', context)

@@ -21,12 +21,16 @@
         {% else %}
             <h2 class="not-available">Не е налично</h2>
         {% endif %}
-        <a href="{% url 'edit food' food.id %}" class="a-button">
-            Редактирай
-        </a>
-        <a href="{% url 'delete food' food.id %}" class="a-button">
-            Изтрий
-        </a>
+        <div>
+        {% if is_authorized %}
+            <a href="{% url 'edit food' food.id %}" class="buttons">
+                Редактирай
+            </a>
+            <a href="{% url 'delete food' food.id %}" class="buttons">
+                Изтрий
+            </a>
+        {% endif %}
+        </div>
 
     </div>
 {% endblock %}

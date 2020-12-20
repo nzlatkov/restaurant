@@ -9,8 +9,8 @@
 }
 
 .food-image {
-    max-width: 75%;
-    max-height: 75%;
+    max-width: 35%;
+    max-height: 35%;
     margin: 15px auto;
 }
 
@@ -26,4 +26,32 @@
 
 .not-available {
     color: red;
+}
+
+.buttons {
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    display: block;
+
+    color: black;
+    font-weight: bold;
+    line-height: 25px;
+
+    border: 1px solid grey;
+
+}
+
+/* Change the color of links on hover */
+.buttons:hover {
+    background-color: #c6c6c6;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.buttons.active {
+    background-color: #4CAF50;
+    color: white;
 }
