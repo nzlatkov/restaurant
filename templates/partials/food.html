@@ -1,0 +1,17 @@
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/food.css' %}">
+{% endblock %}
+
+
+<li class="food-item">
+    <div>
+        <h1 class="food-name">{{ food.name }}</h1>
+    </div>
+    <img src="{{ food.image.url }}" alt="Image Missing." class="food-image">
+    <p class="food-description">{{ food.weight }}г. - {{ food.price }}лв.</p>
+    <a href="{% url 'food details' food.id %}" class="a-button">
+        Детайли
+    </a>
+</li>

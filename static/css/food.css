@@ -1,0 +1,50 @@
+.food-type-heading {
+    border-bottom: 3px solid black;
+}
+
+.food-type-heading h1 {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.food-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 70px;
+}
+
+
+.food-item {
+    margin: 10px auto auto;
+    padding: 10px;
+    width: 60%;
+    height: 350px;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.food-item a {
+    float: none;
+    width: 50%;
+    margin: auto;
+}
+
+.food-image {
+    max-width: 75%;
+    max-height: 75%;
+    margin: auto;
+}
+
+.food-name {
+    font-family: Georgia, sans-serif;
+    margin: auto;
+    max-width: 50%;
+    font-size: 30px;
+}
+
+.food-description {
+    margin: 5px;
+    color: black;
+}

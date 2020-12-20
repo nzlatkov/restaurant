@@ -1,0 +1,74 @@
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+.content {
+    margin: 70px auto auto;
+    width: 50%;
+    border: 2px solid #c6c6c6;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #c6c6c6;
+    opacity: 0.9;
+}
+
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index:1;
+}
+
+.topnav {
+    background-color: #c6c6c6;
+    overflow: auto;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+}
+
+.nav-first {
+    top: 0;
+}
+
+.nav-second {
+    top: 1;
+}
+
+/* Style the links inside the navigation bar */
+.a-button {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+    display: block;
+
+    color: black;
+    font-weight: bold;
+    line-height: 25px;
+
+    border: 1px solid grey;
+
+}
+
+/* Change the color of links on hover */
+.a-button:hover {
+    background-color: #c6c6c6;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.a-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.topnav-right {
+    float: right;
+}

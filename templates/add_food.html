@@ -1,0 +1,16 @@
+{% extends 'shared/base.html' %}
+
+{% block site_content %}
+    <form action="{% url 'add food' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Име: {{ form.name }}<br>
+        Изображение: {{ form.image }}<br>
+        Тегло: {{ form.weight }} г.<br>
+        Цена: {{ form.price }} лв.<br>
+        Време за приготвяне: {{ form.prep_time }} мин.<br>
+        Тип: {{ form.type }}<br>
+        В наличност: {{ form.available }}<br>
+        Описание: {{ form.description }}<br>
+        <button>Създай</button>
+    </form>
+{% endblock %}

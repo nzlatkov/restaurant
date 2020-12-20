@@ -1,0 +1,23 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/food.css' %}">
+{% endblock %}
+
+{% block nav %}
+    {% include 'partials/menu-nav.html' %}
+{% endblock %}
+
+{% block site_content %}
+    <ul class="food-list">
+        {% for type in food_types %}
+            <div class="food-type-heading">
+                <h1 id="{% cycle '0' '1' '2' '3' '4' '5' '6' '7' '8' '9' %}">{% cycle f.0 f.1 f.2 f.3 f.4 f.5 f.6 f.7 f.8 f.9 %}</h1>
+            </div>
+            {% for food in type %}
+                {% include 'partials/food.html' with food=food %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+{% endblock %}

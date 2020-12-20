@@ -1,0 +1,29 @@
+
+.details {
+    margin: 10px auto auto;
+    padding: 10px;
+    width: 60%;
+    height: 600px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.food-image {
+    max-width: 75%;
+    max-height: 75%;
+    margin: 15px auto;
+}
+
+.details p {
+    font-size: large;
+    color: black;
+}
+
+
+.available {
+    color: green;
+}
+
+.not-available {
+    color: red;
+}

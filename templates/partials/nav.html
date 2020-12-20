@@ -1,0 +1,35 @@
+{% load static %}
+
+<header>
+    <nav class="topnav sticky nav-first" style="background-image: url('{% static "wood-hor.jpeg" %}')">
+        <div>
+            <a href="{% url 'home' %}" class="a-button">
+                Начало
+            </a>
+            <a href="{% url 'menu' %}" class="a-button">
+                Меню
+            </a>
+        </div>
+
+        <div class="topnav-right">
+            {% if user.is_authenticated %}
+                <a href="#" class="a-button">
+                    {{ user.username }}
+                </a>
+                <a href="{% url 'add food' %}" class="a-button">
+                    Създай
+                </a>
+                <a href="{% url 'logout' %}" class="a-button">
+                    Изход
+                </a>
+            {% else %}
+                <a href="{% url 'login' %}" class="a-button">
+                    Вход
+                </a>
+                <a href="{% url 'register' %}" class="a-button">
+                    Регистрация
+                </a>
+            {% endif %}
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,21 @@
+{% extends 'shared/base.html' %}
+
+{% load static %}
+
+{% block site_content %}
+    <h1>Регистрация</h1>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Потребителско име"><br>
+        <input type="password" name="password" placeholder="Парола"><br>
+        <input type="Submit" value="Вход">
+    </form>
+
+    <div>
+        {% for message in messages %}
+            <h3>
+                {{ message }}
+            </h3>
+        {% endfor %}
+    </div>
+{% endblock %}
