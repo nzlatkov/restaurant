@@ -1,3 +1,2 @@
-# restaurant
+# Django Project
 
-Django project
