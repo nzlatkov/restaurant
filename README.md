@@ -1,1 +1,3 @@
 # restaurant
+
+Django project
